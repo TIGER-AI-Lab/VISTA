@@ -5,6 +5,33 @@ This repo contains code for [VISTA](https://arxiv.org/abs/2412.00927), a video s
 ### This repo is under construction. Please stay tuned.
 [**🌐 Homepage**](https://tiger-ai-lab.github.io/VISTA/) | [**📖 arXiv**](https://arxiv.org/abs/2412.00927) | [**💻 GitHub**](https://github.com/TIGER-AI-Lab/VISTA) | [**🤗 VISTA-400K**](https://huggingface.co/datasets/TIGER-Lab/VISTA-400K) | [**🤗 Models**](https://huggingface.co/collections/TIGER-Lab/vista-674a2f0fab81be728a673193) | [**🤗 HRVideoBench**](https://huggingface.co/datasets/TIGER-Lab/HRVideoBench)
 
+## 🔔News
+- **[2025-01-07]: Release code for model training and evaluation.**
+- **[2024-12-22]: Our models, datasets and HRVideoBench are now available at [🤗 Hugging Face](https://huggingface.co/collections/TIGER-Lab/vista-674a2f0fab81be728a673193).**
+
+## Install
+Please use the following commands to install the required packages:
+```
+conda env create -f environment.yaml
+conda activate vista
+pip install flash-attn --no-build-isolation
+```
+
+## Model Training
+1. Modify the data configuration files under `train/data_configs/` to point to the correct paths of VISTA subsets.
+2. Follow the commands below to train a VISTA model:
+```
+bash scripts/idefics2/train_idefics2.sh
+bash scripts/longva/train_longva.sh
+bash scripts/videollava/train_videollava.sh
+```
+
+## Evaluation
+Use the scripts under `eval/` to evaluate VISTA models. For example, to evaluate Video-MME for VISTA-LongVA, use the command:
+```
+python eval_video_mme.py --model_type longva --model_name_or_path TIGER-Lab/VISTA-LongVA --num_frames 64 --data_dir <path_to_videomme_data>
+```
+
 ## Video Instruction Data Synthesis Pipeline
 <p align="center">
 <img src="https://tiger-ai-lab.github.io/VISTA/static/images/vista_main.png" width="900">

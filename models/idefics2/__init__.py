@@ -1,0 +1,2 @@
+from .modeling_idefics2 import Idefics2ForConditionalGeneration
+from .processing_idefics2 import Idefics2Processor
