@@ -2,7 +2,6 @@
 
 This repo contains code for [VISTA](https://arxiv.org/abs/2412.00927), a video spatiotemporal augmentation method that generates long-duration and high-resolution video instruction-following data to enhance the video understanding capabilities of video LMMs.
 
-### This repo is under construction. Please stay tuned.
 [**🌐 Homepage**](https://tiger-ai-lab.github.io/VISTA/) | [**📖 arXiv**](https://arxiv.org/abs/2412.00927) | [**💻 GitHub**](https://github.com/TIGER-AI-Lab/VISTA) | [**🤗 VISTA-400K**](https://huggingface.co/datasets/TIGER-Lab/VISTA-400K) | [**🤗 Models**](https://huggingface.co/collections/TIGER-Lab/vista-674a2f0fab81be728a673193) | [**🤗 HRVideoBench**](https://huggingface.co/datasets/TIGER-Lab/HRVideoBench)
 
 ## 🔔News
