@@ -2,15 +2,9 @@ import fire
 import json
 from pathlib import Path
 from eval.utils_mlvu import MLVUDataset
-from tools.llava_chat import LLaVA
-from tools.kangaroo_chat import Kangaroo
 from tools.videollava_chat import VideoLLaVA
-from tools.cross_attn_chat import LLMCrossAttn
 from tools.longva_chat import LongVA
-from tools.qwen2_vl_chat import QWen2_VL
 from tools.idefics2_chat import Idefics2
-from tools.phi3_v_chat import Phi3_V
-# from tools.llava_ov_chat import LLaVA_OneVision
 from tqdm import tqdm
 
 def main(
@@ -34,24 +28,12 @@ def main(
     results_dir = Path(results_dir)
     results_dir.mkdir(parents=True, exist_ok=True)
 
-    if model_type == "llava":
-        model = LLaVA(model_name_or_path)
-    elif model_type == "kangaroo":
-        model = Kangaroo(model_name_or_path)
-    elif model_type == "cross_attn":
-        model = LLMCrossAttn(model_name_or_path)
-    elif model_type == "videollava":
+    if model_type == "videollava":
         model = VideoLLaVA(model_name_or_path)
     elif model_type == "longva":
         model = LongVA(model_name_or_path)
-    elif model_type == "qwen2_vl":
-        model = QWen2_VL(model_name_or_path)
     elif model_type == "idefics2":
         model = Idefics2(model_name_or_path)
-    elif model_type == "phi3_v":
-        model = Phi3_V(model_name_or_path)
-    # elif model_type == "llava_ov":
-    #     model = LLaVA_OneVision(model_name_or_path)
     else:
         raise ValueError(f"Invalid model type: {model_type}")
 
