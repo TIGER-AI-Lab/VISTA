@@ -5,6 +5,7 @@ This repo contains code for our CVPR2025 paper [VISTA](https://arxiv.org/abs/241
 [**🌐 Homepage**](https://tiger-ai-lab.github.io/VISTA/) | [**📖 arXiv**](https://arxiv.org/abs/2412.00927) | [**💻 GitHub**](https://github.com/TIGER-AI-Lab/VISTA) | [**🤗 VISTA-400K**](https://huggingface.co/datasets/TIGER-Lab/VISTA-400K) | [**🤗 Models**](https://huggingface.co/collections/TIGER-Lab/vista-674a2f0fab81be728a673193) | [**🤗 HRVideoBench**](https://huggingface.co/datasets/TIGER-Lab/HRVideoBench)
 
 ## 🔔News
+- **[2025-02-26]: Our paper has been accepted by CVPR 2025!**
 - **[2025-01-07]: Release code for model training and evaluation.**
 - **[2024-12-22]: Our models, datasets and HRVideoBench are now available at [🤗 Hugging Face](https://huggingface.co/collections/TIGER-Lab/vista-674a2f0fab81be728a673193).**
 
